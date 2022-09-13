@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+
+<head th:replace="fragments/head :: headFragment"></head>
+
+<body>
+<div class="container-scroller">
+    
+      <!-- start header -->
+      <div th:replace="fragments/header :: headerFragment"></div>
+      <!-- end header -->
+
+      <!-- start aside -->
+      <div th:replace="fragments/asidemenu :: asideFragment"></div>
+      <!-- end aside -->
+	<th:block layout:fragment="customContents"></th:block>
+      <!-- start contents -->
+    
+      <!-- end contents -->
+
+      <!-- start footer -->
+      <div th:replace="fragments/footer :: footerFragment"></div>
+      <!-- end footer -->
+   <!-- 사용자 정의 JS 하단 -->
+   <th:block layout:fragment="customFootJS"></th:block>
+   
+   
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</div>
+
+</body>
+</html>
